@@ -27,7 +27,7 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   height: 100vh;
-  /* background-image: url(../img/iphone.png); */
+  /* background-image: url(../img/ipad_mini.png); */
   background size: cover;
   background-repeat: no-repeat;
 }
@@ -121,7 +121,7 @@ a {
   vertical-align: text-top;
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .wrapper img:first-child {
     top: -4.2vw;
     left: -62.8vw;
@@ -137,7 +137,36 @@ a {
     width: 139.8vw;
     transform: rotate(90deg);
   }
-} */
+
+  .type img:first-child  {
+    display: none;
+  }
+
+  #sub_name {
+    font-size: 5.4vw;
+    top: 23.9vw;
+    left: 4.9vw;
+    width: 33vw;
+  }
+
+  #sub_info {
+    display: none;
+  }
+
+  #main_name {
+    font-size: 9.8vw;
+    top: 37.9vw;
+    left: 43.1vw;
+    width: 47vw;
+  }
+
+  #main_info {
+    font-size: 2.9vw;
+    top: 17.9vw;
+    left: 28.5vw;
+    width: 32vw;
+  }
+}
 
 @media (min-width: 1440px) {
 
@@ -218,12 +247,17 @@ a {
 
 /* Правая часть */
 
+.rotate {
+  transform: rotate(83deg);
+}
+
 .map img:first-child {
-  width: 9.5vw;
-  top: 49.9vw;
-  left: -16.3vw;
-  transform: rotate(86deg);
-  opacity: 100%;
+  width: 15.5vw;
+    top: -63.9vw;
+    left: -16.3vw;
+    transform: rotate(86deg);
+    opacity: 100%;
+    left: 99.7vw;
 }
 
 .map img:nth-child(2) {
@@ -235,10 +269,11 @@ a {
 
 .map img:nth-child(3) {
   position: absolute;
-  top: 15vw;
-  left: 36vw;
-  width: 39vw;
-  z-index: -1;
+    top: 64vw;
+    left: -2vw;
+    width: 80vw;
+    z-index: -1;
+    transform: rotate(90deg);
 }
 
 .map img:nth-child(4) {
@@ -269,7 +304,52 @@ left: 18.4vw;
 width: 4vw;
 }
 
+/* Много картинок */
 
+.sky {
+  position: absolute;
+  width: 180vw;
+  height: 175vw;
+  left: -54vw;
+  top: 15vw;
+  z-index: -1;
+
+}
+
+.big_bang img:first-child{
+  width: 75vw;
+  top: 74vw;
+  left: 56vw;
+  transform: rotate(0deg);
+}
+
+.atom img:first-child {
+  width: 34vw;
+top: 14vw;
+left: 12vw;
+transform: rotate(0deg);
+}
+
+.galaxy :first-child{
+  width: 100vw;
+  position: absolute;
+  top: 71vw;
+  left: 35px;
+}
+
+.galaxy :nth-child(2) {
+  width: 20vw;
+  position: absolute;
+  top: 118vw;
+  left: 16px;
+}
+
+.galaxy  :nth-child(3) {
+  width: 20vw;
+  position: absolute;
+  top: 76vw;
+  left: 167px;
+}
 
 .path_timeline {
   font-size: 32vw;
@@ -286,12 +366,88 @@ svg {
 
 .slider_controller {
   opacity: 100%;
-  width: 134vw;
-  top: 49.9vw;
-  left: -16.3vw;
+    width: 113vw;
+    top: -44.9vw;
+    left: 104.7vw;
+    transform: rotate(0deg);
+}
+
+@media (min-width: 768px) {
+
+  .rotate {
+    transform: rotate(90deg);
+  }
+
+  .map img:first-child {
+      width: 15.5vw;
+      top: -63.9vw;
+      left: 88.7vw;
+  }
+
+  .map img:nth-child(2) {
+    top: 48.7vw;
+    left: 4.2vw;
+    width: 93.1vw;
+    }
+
+  .map img:nth-child(3) {
+    top: 46.6vw;
+    left: 3vw;
+    width: 71vw;
+  }
+
+  .map img:nth-child(4) {
+    position: absolute;
+  top: 15vw;
+  left: 18.4vw;
+  width: 64vw;
+  }
+
+  .map img:nth-child(5) {
+    position: absolute;
+  top: 15vw;
+  left: 18.4vw;
+  width: 4vw;
+  }
+
+  .map img:nth-child(6) {
+    position: absolute;
+  top: 15vw;
+  left: 18.4vw;
+  width: 4vw;
+  }
+
+  .map img:nth-child(7) {
+    position: absolute;
+  top: 15vw;
+  left: 18.4vw;
+  width: 4vw;
+  }
+
+  .path_timeline {
+    font-size: 9vw;
+  }
+
+  svg {
+    width: 110vw;
+    position: absolute;
+    top: 41.9vw;
+    left: -7.3vw;
+    transform: rotate(92deg);
+  }
+
+  .slider_controller {
+    width: 104vw;
+    top: -45.9vw;
+    left: 87.7vw;
+  }
 }
 
 @media (min-width: 1440px) {
+  .rotate {
+    transform: rotate(0deg);
+  }
+
   .map img:first-child {
     top: -14.7vw;
     left: 22.5vw;
@@ -307,6 +463,7 @@ svg {
   }
 
   .map img:nth-child(3) {
+    transform: rotate(0);
     position: absolute;
     top: 15vw;
     left: 36vw;

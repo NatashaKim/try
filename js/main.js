@@ -18,7 +18,7 @@ function galaxyTween(galaxyName, angleDeg, zoom){
 let controller = new ScrollMagic.Controller()
 
 let mainScene = new ScrollMagic.Scene({
-  duration: 14000
+  duration: 63000
 });
 mainScene.setPin('#wrapper_2');
 mainScene.addTo(controller);
@@ -29,7 +29,7 @@ var subInfo = document.getElementById("sub_info");
 var mainName = document.getElementById("main_name");
 var mainInfo = document.getElementById("main_info");
 
-
+var tween = TweenMax.to(".sky", 1, {scale:0.000001, ease:Linear.easeNone});
 
 let path = anime.path('#curve')
 let svgMotion = anime({
@@ -38,24 +38,24 @@ let svgMotion = anime({
   translateY: path('y'),
   rotate: path('angle'),
   easing: 'linear',
-  duration: 15000,
+  duration: 63000,
   autoplay: false
 })
 
 
-var tween1 = galaxyTween(".objects1",135,2);
-var tween2 = galaxyTween(".objects2",45,1);
-var tween3 = galaxyTween(".objects3",-90,0.7);
-
-var scene1 = new ScrollMagic.Scene({  duration: 14000}).setTween(tween1).addTo(controller);
-var scene2 = new ScrollMagic.Scene({  duration: 14000}).setTween(tween2).addTo(controller);
-var scene3 = new ScrollMagic.Scene({  duration: 14000}).setTween(tween3).addTo(controller);
-
-var tween = TweenMax.fromTo(".objects", 1,  { scale: 0.1 }, { scale: 0.1, ease:Quad.easeOut});
+// var tween1 = galaxyTween(".objects1",135,2);
+// var tween2 = galaxyTween(".objects2",45,1);
+// var tween3 = galaxyTween(".objects3",-90,0.7);
+//
+// var scene1 = new ScrollMagic.Scene({  duration: 14000}).setTween(tween1).addTo(controller);
+// var scene2 = new ScrollMagic.Scene({  duration: 14000}).setTween(tween2).addTo(controller);
+// var scene3 = new ScrollMagic.Scene({  duration: 14000}).setTween(tween3).addTo(controller);
+//
+// var tween = TweenMax.fromTo(".sky", 1,  { scale: 0.1 }, { scale: 0.1, ease:Quad.easeOut});
 
 // build scene
 var scene = new ScrollMagic.Scene({
-  duration: 14000
+  duration: 63000
 });
 
         scene.on("progress", function (e) {
