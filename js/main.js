@@ -18,7 +18,7 @@ function galaxyTween(galaxyName, angleDeg, zoom){
 let controller = new ScrollMagic.Controller()
 
 let mainScene = new ScrollMagic.Scene({
-  duration: 63000
+  duration: 21000
 });
 mainScene.setPin('#wrapper_2');
 mainScene.addTo(controller);
@@ -29,7 +29,7 @@ var subInfo = document.getElementById("sub_info");
 var mainName = document.getElementById("main_name");
 var mainInfo = document.getElementById("main_info");
 
-var tween = TweenMax.to(".sky", 1, {scale:0.000001, ease:Linear.easeNone});
+// var tween = TweenMax.to(".sky", 1, {scale:0.000001, ease:Linear.easeNone});
 
 let path = anime.path('#curve')
 let svgMotion = anime({
@@ -38,24 +38,73 @@ let svgMotion = anime({
   translateY: path('y'),
   rotate: path('angle'),
   easing: 'linear',
-  duration: 63000,
+  duration: 21000,
   autoplay: false
 })
 
+//  Большой взрыв
 
-// var tween1 = galaxyTween(".objects1",135,2);
-// var tween2 = galaxyTween(".objects2",45,1);
-// var tween3 = galaxyTween(".objects3",-90,0.7);
-//
-// var scene1 = new ScrollMagic.Scene({  duration: 14000}).setTween(tween1).addTo(controller);
-// var scene2 = new ScrollMagic.Scene({  duration: 14000}).setTween(tween2).addTo(controller);
-// var scene3 = new ScrollMagic.Scene({  duration: 14000}).setTween(tween3).addTo(controller);
-//
-// var tween = TweenMax.fromTo(".sky", 1,  { scale: 0.1 }, { scale: 0.1, ease:Quad.easeOut});
+new ScrollMagic.Scene({ offset:0, duration:10000})
+.setTween(TweenMax.fromTo(".big_bang", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.addTo(controller);
+
+new ScrollMagic.Scene({ offset:0, duration:10000})
+.setTween(TweenMax.fromTo(".big_bang_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.addTo(controller);
+
+//  Атомы
+
+new ScrollMagic.Scene({ offset:2900, duration:5000})
+.setTween(TweenMax.fromTo(".atom", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.addTo(controller);
+
+new ScrollMagic.Scene({ offset:2900, duration:5000})
+.setTween(TweenMax.fromTo(".atom_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.addTo(controller);
+
+//  Большие структуры
+
+new ScrollMagic.Scene({ offset:5900, duration:5000})
+.setTween(TweenMax.fromTo(".relict", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.addTo(controller);
+
+new ScrollMagic.Scene({ offset:5900, duration:5000})
+.setTween(TweenMax.fromTo(".relict_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.addTo(controller);
+
+//  Кластеры галактик
+
+new ScrollMagic.Scene({ offset:8900, duration:5000})
+.setTween(TweenMax.fromTo(".planet", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.addTo(controller);
+
+new ScrollMagic.Scene({ offset:8900, duration:5000})
+.setTween(TweenMax.fromTo(".planet_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.addTo(controller);
+
+//  Вселенная сегодня
+
+new ScrollMagic.Scene({ offset:11900, duration:5000})
+.setTween(TweenMax.fromTo(".galaxy", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.addTo(controller);
+
+new ScrollMagic.Scene({ offset:11900, duration:5000})
+.setTween(TweenMax.fromTo("#galaxy_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.addTo(controller);
+
+//  Вселенная сегодня
+
+new ScrollMagic.Scene({ offset:15000, duration:6000})
+.setTween(TweenMax.fromTo(".cloud", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.addTo(controller);
+
+new ScrollMagic.Scene({ offset:15000, duration:6000})
+.setTween(TweenMax.fromTo("#cloud_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.addTo(controller);
 
 // build scene
 var scene = new ScrollMagic.Scene({
-  duration: 63000
+  duration: 21000
 });
 
         scene.on("progress", function (e) {
@@ -106,5 +155,5 @@ var scene = new ScrollMagic.Scene({
         }
 
       });
-        scene.setTween(tween);
+        // scene.setTween(tween);
         scene.addTo(controller);

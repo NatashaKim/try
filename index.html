@@ -8,7 +8,20 @@
     <script src="js/anime.min.js"></script>
   </head>
   <body>
+    <script>
+    let audio = null;
+    function play(audio_id) {
+            if (audio != null) {
+              audio.pause();
+              audio = null;
+              return;
+            }
+            audio = document.getElementById(audio_id);
+            audio.play();
+          }
+    </script>
 
+<div class="trigger1" id="trigger1"></div>
     <div class="wrapper" id="wrapper_2">
       <img src="img/mask.png" alt="Маска">
       <img src="img/ratio.png" alt="Сечение">
@@ -34,7 +47,8 @@
         </div>
         <img src="img/waves.png" alt="Волны">
         <img class="background-container" src="img/clouds.png" alt="Разводы">
-        <div class="sky">
+
+        <!-- <div class="sky"> -->
           <div class="big_bang">
             <img src="img/big_bang.png" alt="Большой взрыв">
           </div>
@@ -44,23 +58,32 @@
             <img src="img/atom_1.png" alt="Атом_3">
             <img src="img/atom_2.png" alt="Атом_4">
           </div>
+          <div class="relict">
+            <img src="img/relict_2.png" alt="Излучение_1">
+            <img src="img/relict_3.png" alt="Излучение_2">
+            <img src="img/relict_3.png" alt="Излучение_3">
+            <img src="img/relict_2.png" alt="Излучение_4">
+          </div>
           <div class="planet">
             <img src="img/planet_1.png" alt="Планета_1">
             <img src="img/planet_2.png" alt="Планета_2">
             <img src="img/planet_3.png" alt="Планета_3">
             <img src="img/planet_1.png" alt="Планета_4">
-            <img src="img/planet_2.png" alt="Планета_5">
-            <img src="img/planet_3.png" alt="Планета_6">
           </div>
           <div class="galaxy">
             <img src="img/galaxy_1.png" alt="Галактика_1">
             <img src="img/galaxy_2.png" alt="Галактика_2">
             <img src="img/galaxy_3.png" alt="Галактика_3">
             <img src="img/galaxy_1.png" alt="Галактика_4">
-            <img src="img/galaxy_2.png" alt="Галактика_5">
-            <img src="img/galaxy_3.png" alt="Галактика_6">
           </div>
-        </div>
+          <div class="cloud">
+            <img src="img/cloud_1.png" alt="Облако" onclick="play('cloud_sound')">
+            <img src="img/cloud_3.png" alt="Облако">
+            <img src="img/cloud_3.png" alt="Облако">
+            <!-- <img src="img/cloud_3.png" alt="Облако">
+            <img src="img/cloud_3.png" alt="Облако"> -->
+          </div>
+        <!-- </div> -->
 
         <svg viewBox="0 0 3231.19 2969.05">
           <path class="st0" fill="transparent" d="M416.99,375.41c1265-5,2300,1001,2284,2383"/>
@@ -74,6 +97,50 @@
             <textPath xlink:href="#curve" class="path_timeline" startOffset="85.7%">будущее</textPath>
           </text>
         </svg>
+
+        <div class="big_bang">
+          <img src="img/big_bang.png" alt="Большой взрыв" onclick="play('big_bang_sound')">
+        </div>
+        <div class="atom">
+          <img src="img/empty.png" alt="Атом_1" onclick="play('atom_sound')">
+          <img src="img/empty.png" alt="Атом_2" onclick="play('atom_sound')">
+          <img src="img/empty.png" alt="Атом_3" onclick="play('atom_sound')">
+          <img src="img/empty.png" alt="Атом_4" onclick="play('atom_sound')">
+        </div>
+        <div class="relict">
+          <img src="img/empty.png" alt="Излучение_1" onclick="play('relict_sound')">
+          <img src="img/empty.png" alt="Излучение_2" onclick="play('relict_sound')">
+          <img src="img/empty.png" alt="Излучение_3" onclick="play('relict_sound')">
+          <img src="img/empty.png" alt="Излучение_4" onclick="play('relict_sound')">
+        </div>
+        <div class="planet">
+          <img src="img/empty.png" alt="Планета_1" onclick="play('planet_sound')">
+          <img src="img/empty.png" alt="Планета_2" onclick="play('planet_sound')">
+          <img src="img/empty.png" alt="Планета_3" onclick="play('planet_sound')">
+          <img src="img/empty.png" alt="Планета_4" onclick="play('planet_sound')">
+        </div>
+        <div class="galaxy" id="galaxy_button">
+          <img src="img/empty.png" alt="Галактика_1" onclick="play('galaxy_sound')">
+          <img src="img/empty.png" alt="Галактика_2" onclick="play('galaxy_sound')">
+          <img src="img/empty.png" alt="Галактика_3" onclick="play('galaxy_sound')">
+          <img src="img/empty.png" alt="Галактика_4" onclick="play('galaxy_sound')">
+        </div>
+        <div class="cloud" id="cloud_button">
+          <img src="img/empty.png" alt="Облако" onclick="play('cloud_sound')">
+          <img src="img/empty.png" alt="Облако" onclick="play('cloud_sound')">
+          <img src="img/empty.png" alt="Облако" onclick="play('cloud_sound')">
+          <!-- <img src="img/cloud_3.png" alt="Облако">
+          <img src="img/cloud_3.png" alt="Облако"> -->
+        </div>
+
+        <section class="sound">
+          <audio id="big_bang_sound" src="sound/big_bang.mp3"></audio>
+          <audio id="atom_sound" src="sound/atom.mp3"></audio>
+          <audio id="relict_sound" src="sound/relict.mp3"></audio>
+          <audio id="planet_sound" src="sound/planet.mp3"></audio>
+          <audio id="galaxy_sound" src="sound/galaxy.mp3"></audio>
+          <audio id="cloud_sound" src="sound/cluud.mp3"></audio>
+        </section>
 
     </div>
 
