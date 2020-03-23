@@ -1,3 +1,14 @@
+let red = anime({
+  targets: '.red',
+  duration: 2000,
+  opacity: [0],
+  easing: 'linear',
+  autoplay: true,
+  loop: true,
+  direction: 'alternate'
+})
+
+
 
  function tweenPosition(angle, rayLength, zoom){
    var c = Math.cos(angle);
@@ -11,6 +22,17 @@ function galaxyTween(galaxyName, angleDeg, zoom){
     tweenPosition(angleDeg / 180 * 3.1415,400*zoom,1)
   );
 }
+
+function setChildsDisplay(elementId, display){
+  d = document.getElementById(elementId);
+  for(i=0; i < d.childNodes.length; i++) {
+    e = d.childNodes[i];
+    if(e.tagName=="IMG") e.style.display=display;
+  }
+}
+
+
+
 
 
 
@@ -49,7 +71,9 @@ new ScrollMagic.Scene({ offset:0, duration:10000})
 .addTo(controller);
 
 new ScrollMagic.Scene({ offset:0, duration:10000})
-.setTween(TweenMax.fromTo(".big_bang_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.setTween(TweenMax.fromTo("#big_bang_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.on("enter", function (event) { setChildsDisplay('big_bang_button','block'); })
+.on("leave", function (event) { setChildsDisplay('big_bang_button','none'); })
 .addTo(controller);
 
 //  Атомы
@@ -59,7 +83,9 @@ new ScrollMagic.Scene({ offset:2900, duration:5000})
 .addTo(controller);
 
 new ScrollMagic.Scene({ offset:2900, duration:5000})
-.setTween(TweenMax.fromTo(".atom_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.setTween(TweenMax.fromTo("#atom_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.on("enter", function (event) { setChildsDisplay('atom_button','block'); })
+.on("leave", function (event) { setChildsDisplay('atom_button','none'); })
 .addTo(controller);
 
 //  Большие структуры
@@ -69,7 +95,9 @@ new ScrollMagic.Scene({ offset:5900, duration:5000})
 .addTo(controller);
 
 new ScrollMagic.Scene({ offset:5900, duration:5000})
-.setTween(TweenMax.fromTo(".relict_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.setTween(TweenMax.fromTo("#relict_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.on("enter", function (event) { setChildsDisplay('relict_button','block'); })
+.on("leave", function (event) { setChildsDisplay('relict_button','none'); })
 .addTo(controller);
 
 //  Кластеры галактик
@@ -79,7 +107,9 @@ new ScrollMagic.Scene({ offset:8900, duration:5000})
 .addTo(controller);
 
 new ScrollMagic.Scene({ offset:8900, duration:5000})
-.setTween(TweenMax.fromTo(".planet_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.setTween(TweenMax.fromTo("#planet_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.on("enter", function (event) { setChildsDisplay('planet_button','block'); })
+.on("leave", function (event) { setChildsDisplay('planet_button','none'); })
 .addTo(controller);
 
 //  Вселенная сегодня
@@ -90,7 +120,11 @@ new ScrollMagic.Scene({ offset:11900, duration:5000})
 
 new ScrollMagic.Scene({ offset:11900, duration:5000})
 .setTween(TweenMax.fromTo("#galaxy_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.on("enter", function (event) { setChildsDisplay('galaxy_button','block'); })
+.on("leave", function (event) { setChildsDisplay('galaxy_button','none'); })
 .addTo(controller);
+
+
 
 //  Вселенная сегодня
 
@@ -100,6 +134,8 @@ new ScrollMagic.Scene({ offset:15000, duration:6000})
 
 new ScrollMagic.Scene({ offset:15000, duration:6000})
 .setTween(TweenMax.fromTo("#cloud_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
+.on("enter", function (event) { setChildsDisplay('cloud_button','block'); })
+.on("leave", function (event) { setChildsDisplay('cloud_button','none'); })
 .addTo(controller);
 
 // build scene

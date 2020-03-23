@@ -47,6 +47,7 @@
         </div>
         <img src="img/waves.png" alt="Волны">
         <img class="background-container" src="img/clouds.png" alt="Разводы">
+        <!-- <img class="red" src="img/red.png" alt="Разводы2"> -->
 
         <!-- <div class="sky"> -->
           <div class="big_bang">
@@ -98,22 +99,22 @@
           </text>
         </svg>
 
-        <div class="big_bang">
-          <img src="img/big_bang.png" alt="Большой взрыв" onclick="play('big_bang_sound')">
+        <div class="big_bang" id="big_bang_button">
+          <img src="img/empty.png" alt="Большой взрыв" onclick="play('big_bang_sound')">
         </div>
-        <div class="atom">
+        <div class="atom" id="atom_button">
           <img src="img/empty.png" alt="Атом_1" onclick="play('atom_sound')">
           <img src="img/empty.png" alt="Атом_2" onclick="play('atom_sound')">
           <img src="img/empty.png" alt="Атом_3" onclick="play('atom_sound')">
           <img src="img/empty.png" alt="Атом_4" onclick="play('atom_sound')">
         </div>
-        <div class="relict">
+        <div class="relict" id="relict_button">
           <img src="img/empty.png" alt="Излучение_1" onclick="play('relict_sound')">
           <img src="img/empty.png" alt="Излучение_2" onclick="play('relict_sound')">
           <img src="img/empty.png" alt="Излучение_3" onclick="play('relict_sound')">
           <img src="img/empty.png" alt="Излучение_4" onclick="play('relict_sound')">
         </div>
-        <div class="planet">
+        <div class="planet" id="planet_button">
           <img src="img/empty.png" alt="Планета_1" onclick="play('planet_sound')">
           <img src="img/empty.png" alt="Планета_2" onclick="play('planet_sound')">
           <img src="img/empty.png" alt="Планета_3" onclick="play('planet_sound')">
@@ -139,7 +140,7 @@
           <audio id="relict_sound" src="sound/relict.mp3"></audio>
           <audio id="planet_sound" src="sound/planet.mp3"></audio>
           <audio id="galaxy_sound" src="sound/galaxy.mp3"></audio>
-          <audio id="cloud_sound" src="sound/cluud.mp3"></audio>
+          <audio id="cloud_sound" src="sound/cloud.mp3"></audio>
         </section>
 
     </div>

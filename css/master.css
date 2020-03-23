@@ -395,45 +395,44 @@ width: 4vw;
 
 .big_bang img:first-child{
   width: 67.7vw;
-top: -13.2vw;
-left: -32.3vw;
-transform: rotate(0deg);
-
+  top: -13.2vw;
+  left: -32.3vw;
+  transform: rotate(0deg);
 }
 
 .atom img:first-child {
   width: 35.6vw;
-    top: -76.5vw;
-    left: -39.5vw;
-    transform: rotate(0deg);
+  top: -76.5vw;
+  left: -39.5vw;
+  transform: rotate(0deg);
 }
 
 .atom img:nth-child(2) {
   width: 150vw;
-top: -240vw;
-left: 58.5vw;
-transform: rotate(0deg);
+  top: -240vw;
+  left: 58.5vw;
+  transform: rotate(0deg);
 }
 
 .atom img:nth-child(3) {
   width: 40.6vw;
-    top: 51vw;
-    left: 5.5vw;
-    transform: rotate(0deg);
+  top: 51vw;
+  left: 5.5vw;
+  transform: rotate(0deg);
 }
 
 .atom img:nth-child(4) {
   position: absolute;
-top: 67vw;
-left: -195.6vw;
-width: 120vw;
+  top: 67vw;
+  left: -195.6vw;
+  width: 120vw;
 }
 
 .relict img:first-child {
   width: 235.6vw;
-    top: -242vw;
-    left: -179.5vw;
-        transform: rotate(-20deg);
+  top: -242vw;
+  left: -179.5vw;
+  transform: rotate(-20deg);
 }
 
 .relict img:nth-child(2) {
@@ -1084,6 +1083,15 @@ width: 69.2vw;
     z-index: -1;
   }
 
+  .map img:nth-child(4) {
+    transform: rotate(0);
+    position: absolute;
+    top: 15vw;
+    left: 36vw;
+    width: 39vw;
+    z-index: -1;
+  }
+
   .path_timeline {
     font-size: 4.1vw;
     fill: var(--main-color);
@@ -1281,7 +1289,11 @@ z-index: -1;
   }
 }
 
-#cloud_button,
-#galaxy_button {
+#big_bang_button,
+#atom_button,
+#relict_button,
+#planet_button,
+#galaxy_button,
+#cloud_button {
   z-index: 1;
 }
