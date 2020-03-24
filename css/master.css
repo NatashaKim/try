@@ -1273,15 +1273,34 @@ svg {
   display: none;
 }
 
-#big_bang_button,
-#atom_button,
-#relict_button,
-#planet_button,
-#galaxy_button,
-#cloud_button:hover ~ #cursor {
+#big_bang_button:hover ~ #cursor {
   width: 100px;
   height: 100px;
+  border: 2px dashed var(--main-color);
+}
 
+#atom_button:hover ~ #cursor {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed var(--main-color);
+}
+
+#relict_button:hover ~ #cursor {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed var(--main-color);
+}
+
+#planet_button:hover ~ #cursor {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed var(--main-color);
+}
+
+#galaxy_button:hover ~ #cursor {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed var(--main-color);
 }
 
 #cloud_button:hover ~ #cursor {
