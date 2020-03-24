@@ -353,31 +353,13 @@ a {
 
 .map img:nth-child(4) {
   position: absolute;
-top: 15vw;
-left: 18.4vw;
-width: 64vw;
+    top: 64vw;
+    left: -2vw;
+    width: 80vw;
+    z-index: -1;
+    transform: rotate(90deg);
 }
 
-.map img:nth-child(5) {
-  position: absolute;
-top: 15vw;
-left: 18.4vw;
-width: 4vw;
-}
-
-.map img:nth-child(6) {
-  position: absolute;
-top: 15vw;
-left: 18.4vw;
-width: 4vw;
-}
-
-.map img:nth-child(7) {
-  position: absolute;
-top: 15vw;
-left: 18.4vw;
-width: 4vw;
-}
 
 /* Много картинок */
 
@@ -624,32 +606,11 @@ svg {
   }
 
   .map img:nth-child(4) {
-    position: absolute;
-  top: 15vw;
-  left: 18.4vw;
-  width: 64vw;
+    top: 46.6vw;
+    left: 3vw;
+    width: 71vw;
   }
 
-  .map img:nth-child(5) {
-    position: absolute;
-  top: 15vw;
-  left: 18.4vw;
-  width: 4vw;
-  }
-
-  .map img:nth-child(6) {
-    position: absolute;
-  top: 15vw;
-  left: 18.4vw;
-  width: 4vw;
-  }
-
-  .map img:nth-child(7) {
-    position: absolute;
-  top: 15vw;
-  left: 18.4vw;
-  width: 4vw;
-  }
 
   .path_timeline {
     font-size: 9vw;
@@ -862,6 +823,15 @@ width: 69.2vw;
     z-index: -1;
   }
 
+  .map img:nth-child(4) {
+    transform: rotate(0);
+    position: absolute;
+    top: 19.5vw;
+    left: 40vw;
+    width: 47vw;
+    z-index: -1;
+  }
+
   .path_timeline {
     font-size: 6.1vw;
     fill: var(--main-color);
@@ -876,9 +846,6 @@ width: 69.2vw;
   }
 
   .slider_controller {
-    /* top: -3.9vw;
-    left: 27.8vw;
-    width: 85.9vw; */
     top: -0.9vw;
     left: 26.8vw;
     width: 83.9vw;
@@ -906,143 +873,141 @@ width: 69.2vw;
 
   .atom img:first-child {
     width: 35.6vw;
-      top: -76.5vw;
-      left: -39.5vw;
-      transform: rotate(0deg);
+top: -76.5vw;
+left: -74.5vw;
+transform: rotate(0deg);
   }
 
   .atom img:nth-child(2) {
     width: 150vw;
-  top: -240vw;
-  left: 58.5vw;
-  transform: rotate(0deg);
+top: -169vw;
+left: 0.5vw;
+transform: rotate(0deg);
   }
 
   .atom img:nth-child(3) {
     width: 40.6vw;
-      top: 51vw;
-      left: 5.5vw;
-      transform: rotate(0deg);
+top: 51vw;
+left: 26.5vw;
   }
 
   .atom img:nth-child(4) {
     position: absolute;
-  top: 67vw;
-  left: -195.6vw;
-  width: 120vw;
+top: 36vw;
+left: -158.6vw;
+width: 123vw;
   }
 
   .relict img:first-child {
-    width: 235.6vw;
-      top: -242vw;
-      left: -179.5vw;
-          transform: rotate(-20deg);
+    width: 175.6vw;
+top: -219vw;
+left: -155.5vw;
+transform: rotate(-20deg);
   }
 
   .relict img:nth-child(2) {
     width: 105.6vw;
-      top: 83vw;
-      left: -88.5vw;
-      transform: rotate(386deg);
+top: 72vw;
+left: -88.5vw;
   }
 
   .relict img:nth-child(3) {
     width: 104.6vw;
-      top: -90vw;
-      left: -67.5vw;
-      transform: rotate(-213deg);
+top: -90vw;
+left: -67.5vw;
+transform: rotate(-213deg);
   }
 
   .relict img:nth-child(4) {
     position: absolute;
-      top: -95vw;
-      left: 124.4vw;
-      width: 208vw;
-      transform: rotate(-265deg);
+top: -54vw;
+left: 41.4vw;
+width: 184vw;
+transform: rotate(-265deg);
   }
 
   .planet img:first-child{
-    width: 120vw;
+    width: 80vw;
     position: absolute;
-    top: 48vw;
-    left: -210px;
+    top: 24vw;
+    left: -351px;
     transform: rotate(-43deg);
   }
 
   .planet img:nth-child(2) {
-    width: 260.6vw;
-    top: -203vw;
-    left: -296.5vw;
-    transform: rotate(468deg);
+    width: 215.6vw;
+top: -203vw;
+left: -210.5vw;
+transform: rotate(468deg);
   }
 
   .planet img:nth-child(3) {
-    width: 120.6vw;
-      top: -86vw;
-      left: -6.5vw;
-      transform: rotate(-319deg);
+    width: 85.6vw;
+    top: -58vw;
+    left: -21.5vw;
+    transform: rotate(-319deg);
   }
 
   .planet img:nth-child(4) {
     position: absolute;
-      top: -127vw;
-      left: 116.4vw;
-      width: 326vw;
-      transform: rotate(-427deg);
+top: -5vw;
+left: 11.4vw;
+width: 230vw;
+transform: rotate(-427deg);
   }
 
   .galaxy img:first-child{
-    width: 120vw;
-  position: absolute;
-  top: 41vw;
-  left: -210px;
-  transform: rotate(4deg);
+    width: 62vw;
+position: absolute;
+top: 17vw;
+left: -702px;
+transform: rotate(4deg);
   }
 
   .galaxy img:nth-child(2) {
-    width: 230.6vw;
-      top: -252vw;
-      left: 125.5vw;
-      transform: rotate(377deg);
+    width: 151.6vw;
+top: -258vw;
+left: -126.5vw;
+transform: rotate(377deg);
   }
 
   .galaxy img:nth-child(3) {
-    width: 120.6vw;
-    top: -98vw;
-    left: -56.5vw;
-    transform: rotate(-360deg);
+    width: 66.6vw;
+top: -68vw;
+left: -34.5vw;
+transform: rotate(-360deg);
   }
 
   .galaxy img:nth-child(4) {
     position: absolute;
-    top: 132vw;
-    left: -223.4vw;
-    width: 262vw;
-    transform: rotate(37deg);
+top: -24vw;
+left: 54.6vw;
+width: 175vw;
+transform: rotate(103deg);
   }
 
   .cloud img:first-child {
     position: absolute;
-  top: 34vw;
-  left: -223.4vw;
-  width: 96vw;
-  transform: rotate(37deg);
+top: -22vw;
+left: -110.4vw;
+width: 60vw;
+transform: rotate(37deg);
   }
 
   .cloud img:nth-child(2) {
     position: absolute;
-  top: -2vw;
-  left: -41.4vw;
-  width: 163vw;
-  transform: rotate(37deg);
+top: 8vw;
+left: -41.4vw;
+width: 94vw;
+transform: rotate(37deg);
   }
 
   .cloud img:nth-child(3) {
     position: absolute;
-  top: -277vw;
-  left: -361.4vw;
-  width: 262vw;
-  transform: rotate(85deg);
+top: -151vw;
+left: -128.4vw;
+width: 98vw;
+transform: rotate(85deg);
   }
 }
 
@@ -1118,8 +1083,8 @@ width: 69.2vw;
   .planet,
   .cloud {
     position: absolute;
-top: 36vw;
-left: 54vw;
+top: 39vw;
+left: 51vw;
 z-index: -1;
 
   }
