@@ -1,3 +1,15 @@
+// Анимация курсора
+let cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', function(e){
+  let x = e.clientX;
+  let y = e.clientY;
+  cursor.style.left = x +"px";
+  cursor.style.top = y +"px";
+})
+
+
+// Анимация фона
+
 let red = anime({
   targets: '.red',
   duration: 2000,
@@ -10,21 +22,26 @@ let red = anime({
 
 
 
- function tweenPosition(angle, rayLength, zoom){
-   var c = Math.cos(angle);
-   var s = Math.sin(angle);
-   return       { scale: zoom, x: rayLength * c * zoom, y:rayLength * s * zoom };
- }
+//  function tweenPosition(angle, rayLength, zoom){
+//    var c = Math.cos(angle);
+//    var s = Math.sin(angle);
+//    return       { scale: zoom, x: rayLength * c * zoom, y:rayLength * s * zoom };
+//  }
+//
+// function galaxyTween(galaxyName, angleDeg, zoom){
+//   return TweenMax.fromTo(galaxyName, 1,
+//     tweenPosition(angleDeg / 180 * 3.1415,400*zoom,0.1),
+//     tweenPosition(angleDeg / 180 * 3.1415,400*zoom,1)
+//   );
+// }
 
-function galaxyTween(galaxyName, angleDeg, zoom){
-  return TweenMax.fromTo(galaxyName, 1,
-    tweenPosition(angleDeg / 180 * 3.1415,400*zoom,0.1),
-    tweenPosition(angleDeg / 180 * 3.1415,400*zoom,1)
-  );
-}
+
+
+// Для того, чтобы ближние "кнопки" не закрывали дальние
 
 function setChildsDisplay(elementId, display){
   d = document.getElementById(elementId);
+  d.style.display=display;
   for(i=0; i < d.childNodes.length; i++) {
     e = d.childNodes[i];
     if(e.tagName=="IMG") e.style.display=display;
@@ -33,10 +50,8 @@ function setChildsDisplay(elementId, display){
 
 
 
-
-
-
 // Зафиксировать окно
+
 let controller = new ScrollMagic.Controller()
 
 let mainScene = new ScrollMagic.Scene({
@@ -45,13 +60,18 @@ let mainScene = new ScrollMagic.Scene({
 mainScene.setPin('#wrapper_2');
 mainScene.addTo(controller);
 
+
+
 // Анимация текста
+
 var subName = document.getElementById("sub_name");
 var subInfo = document.getElementById("sub_info");
 var mainName = document.getElementById("main_name");
 var mainInfo = document.getElementById("main_info");
 
-// var tween = TweenMax.to(".sky", 1, {scale:0.000001, ease:Linear.easeNone});
+
+
+// Анимация слайдера
 
 let path = anime.path('#curve')
 let svgMotion = anime({
@@ -64,37 +84,40 @@ let svgMotion = anime({
   autoplay: false
 })
 
-//  Большой взрыв
 
-new ScrollMagic.Scene({ offset:0, duration:10000})
+
+// Появление картинок
+
+// Большой взрыв
+
+new ScrollMagic.Scene({ offset:0, duration:9000})
 .setTween(TweenMax.fromTo(".big_bang", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
 .addTo(controller);
 
-new ScrollMagic.Scene({ offset:0, duration:10000})
+new ScrollMagic.Scene({ offset:0, duration:9000})
 .setTween(TweenMax.fromTo("#big_bang_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
 .on("enter", function (event) { setChildsDisplay('big_bang_button','block'); })
 .on("leave", function (event) { setChildsDisplay('big_bang_button','none'); })
 .addTo(controller);
 
-//  Атомы
+// Атомы
 
-new ScrollMagic.Scene({ offset:2900, duration:5000})
+new ScrollMagic.Scene({ offset:2900, duration:4000})
 .setTween(TweenMax.fromTo(".atom", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
 .addTo(controller);
 
-new ScrollMagic.Scene({ offset:2900, duration:5000})
+new ScrollMagic.Scene({ offset:2900, duration:4000})
 .setTween(TweenMax.fromTo("#atom_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
 .on("enter", function (event) { setChildsDisplay('atom_button','block'); })
 .on("leave", function (event) { setChildsDisplay('atom_button','none'); })
-.addTo(controller);
 
 //  Большие структуры
 
-new ScrollMagic.Scene({ offset:5900, duration:5000})
+new ScrollMagic.Scene({ offset:5900, duration:4000})
 .setTween(TweenMax.fromTo(".relict", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
 .addTo(controller);
 
-new ScrollMagic.Scene({ offset:5900, duration:5000})
+new ScrollMagic.Scene({ offset:5900, duration:4000})
 .setTween(TweenMax.fromTo("#relict_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
 .on("enter", function (event) { setChildsDisplay('relict_button','block'); })
 .on("leave", function (event) { setChildsDisplay('relict_button','none'); })
@@ -102,11 +125,11 @@ new ScrollMagic.Scene({ offset:5900, duration:5000})
 
 //  Кластеры галактик
 
-new ScrollMagic.Scene({ offset:8900, duration:5000})
+new ScrollMagic.Scene({ offset:8900, duration:4000})
 .setTween(TweenMax.fromTo(".planet", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
 .addTo(controller);
 
-new ScrollMagic.Scene({ offset:8900, duration:5000})
+new ScrollMagic.Scene({ offset:8900, duration:4000})
 .setTween(TweenMax.fromTo("#planet_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
 .on("enter", function (event) { setChildsDisplay('planet_button','block'); })
 .on("leave", function (event) { setChildsDisplay('planet_button','none'); })
@@ -114,11 +137,11 @@ new ScrollMagic.Scene({ offset:8900, duration:5000})
 
 //  Вселенная сегодня
 
-new ScrollMagic.Scene({ offset:11900, duration:5000})
+new ScrollMagic.Scene({ offset:11900, duration:4000})
 .setTween(TweenMax.fromTo(".galaxy", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
 .addTo(controller);
 
-new ScrollMagic.Scene({ offset:11900, duration:5000})
+new ScrollMagic.Scene({ offset:11900, duration:4000})
 .setTween(TweenMax.fromTo("#galaxy_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
 .on("enter", function (event) { setChildsDisplay('galaxy_button','block'); })
 .on("leave", function (event) { setChildsDisplay('galaxy_button','none'); })
@@ -128,17 +151,20 @@ new ScrollMagic.Scene({ offset:11900, duration:5000})
 
 //  Вселенная сегодня
 
-new ScrollMagic.Scene({ offset:15000, duration:6000})
+new ScrollMagic.Scene({ offset:15000, duration:5000})
 .setTween(TweenMax.fromTo(".cloud", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
 .addTo(controller);
 
-new ScrollMagic.Scene({ offset:15000, duration:6000})
+new ScrollMagic.Scene({ offset:15000, duration:5000})
 .setTween(TweenMax.fromTo("#cloud_button", 1,  { scale: 1.0 }, { scale: 0.0, ease:Quad.easeOut}))
 .on("enter", function (event) { setChildsDisplay('cloud_button','block'); })
 .on("leave", function (event) { setChildsDisplay('cloud_button','none'); })
 .addTo(controller);
 
-// build scene
+
+
+// Анимация текста
+
 var scene = new ScrollMagic.Scene({
   duration: 21000
 });
@@ -191,5 +217,5 @@ var scene = new ScrollMagic.Scene({
         }
 
       });
-        // scene.setTween(tween);
+
         scene.addTo(controller);
