@@ -1,4 +1,27 @@
+// Аудио
+
+let audio = null;
+let current_audio_id = null;
+
+function play(audio_id) {
+
+  if (audio != null) {
+        audio.pause();
+        audio = null;
+
+        if(current_audio_id == audio_id)
+          return;
+  }
+
+  audio = document.getElementById(audio_id);
+  audio.play();
+  current_audio_id = audio_id;
+}
+
+
+
 // Анимация курсора
+
 let cursor = document.getElementById('cursor');
 document.addEventListener('mousemove', function(e){
   let x = e.clientX;

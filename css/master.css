@@ -65,8 +65,8 @@ a {
 .type img:first-child {
   width: 18.4vw;
   display: block;
-  left: 30px;
-  top: -31.5px;
+  left: 8vw;
+  top: -9.7vw;
   transform: rotate(91deg);
   opacity: 100%;
 }
